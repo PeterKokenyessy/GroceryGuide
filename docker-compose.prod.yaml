@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      target: runtime   # production stage
+    container_name: frontend_prod
+    ports:
+      - "80:80"
+    volumes: []
+    networks:
+      - tesconet
+
+  backend:
+    build:
+      context: ./backend
+      target: runtime   # production stage
+    container_name: backend_prod
+    ports:
+      - "8080:8080"
+    volumes: []
+    networks:
+      - tesconet
+
+  db:
+    image: postgres:15
+    container_name: tesco_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - tesconet
+
+volumes:
+  db_data:
+
+networks:
+  tesconet: { }

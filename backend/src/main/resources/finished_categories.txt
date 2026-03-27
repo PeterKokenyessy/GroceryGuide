@@ -1,0 +1,35 @@
+en:Fruits
+en:Desserts
+en:Vegetables
+en:Dairies
+en:Meats
+en:Snacks
+en:Breads
+en:Plant-based foods and beverages
+en:Frozen foods
+en:Confectioneries
+en:Cheeses
+en:Cereals and their products
+en:Fishes
+en:Dairy substitutes
+en:Meat alternatives
+en:Poultries
+en:Juices and nectars
+en:Frozen foods
+en:Meals
+en:Carbonated drinks
+en:Still fruit soft drinks
+en:Spirit drinks
+en:Coffee drinks
+en:Dairy drinks
+en:Fermented drinks
+en:Yogurt drinks
+en:Energy drinks
+en:Beverages
+en:Alcoholic beverages
+en:Rices
+en:Durum wheat pasta
+en:Whole or semi-whole durum wheat pasta
+en:Bakery products
+en:Pork
+en:Beef

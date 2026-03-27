@@ -1,0 +1,72 @@
+# Exported from Render on 2026-03-26T23:20:27Z
+version: "1"
+projects:
+  - name: Tesco
+    environments:
+      - name: Production
+        services:
+          - type: web
+            name: tesco_backend_1
+            runtime: image
+            image:
+              url: docker.io/zoleman/tesco_backend:latest
+              creds:
+                fromRegistryCreds:
+                  name: dockerhub_tesco
+            plan: free
+            envVars:
+              - key: SPRING_PROFILES_ACTIVE
+                sync: false
+              - key: SPRING_DATASOURCE_USERNAME
+                sync: false
+              - key: SPRING_DATASOURCE_URL
+                sync: false
+              - key: SPRING_DATASOURCE_PASSWORD
+                sync: false
+            region: frankfurt
+            healthCheckPath: /health
+            autoDeployTrigger: commit
+
+          - type: web
+            name: tesco_backend_2
+            runtime: image
+            image:
+              url: docker.io/zoleman/tesco_backend:latest
+              creds:
+                fromRegistryCreds:
+                  name: dockerhub_tesco
+            plan: free
+            envVars:
+              - key: SPRING_PROFILES_ACTIVE
+                sync: false
+              - key: SPRING_DATASOURCE_USERNAME
+                sync: false
+              - key: SPRING_DATASOURCE_URL
+                sync: false
+              - key: SPRING_DATASOURCE_PASSWORD
+                sync: false
+            region: frankfurt
+            healthCheckPath: /health
+            autoDeployTrigger: commit
+
+          - type: web
+            name: tesco_backend_3
+            runtime: image
+            image:
+              url: docker.io/zoleman/tesco_backend:latest
+              creds:
+                fromRegistryCreds:
+                  name: dockerhub_tesco
+            plan: free
+            envVars:
+              - key: SPRING_PROFILES_ACTIVE
+                sync: false
+              - key: SPRING_DATASOURCE_USERNAME
+                sync: false
+              - key: SPRING_DATASOURCE_URL
+                sync: false
+              - key: SPRING_DATASOURCE_PASSWORD
+                sync: false
+            region: frankfurt
+            healthCheckPath: /health
+            autoDeployTrigger: commit
